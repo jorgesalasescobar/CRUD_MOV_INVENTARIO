@@ -1,0 +1,99 @@
+﻿@using CRUD_MOV_INVENTARIO.Models
+@model MOV_INVENTARIOModel
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+  <div class="card-header">
+    Editar Movimiento
+  </div>
+  <div class="card-body">
+    
+
+      <form asp-action="Editar" asp-controller="Mantenedor" method="post">
+            <div class="mb-3">
+                <label class="form-label">COD_CIA</label>
+                <input asp-for="COD_CIA" type="text" class="form-control"> 
+                <span asp-validation-for="COD_CIA" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">COMPANIA_VENTA_3</label>
+                <input asp-for="COMPANIA_VENTA_3" type="text" class="form-control">
+                <span asp-validation-for="COMPANIA_VENTA_3" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">ALMACEN_VENTA</label>
+                <input asp-for="ALMACEN_VENTA" type="text" class="form-control">
+                <span asp-validation-for="ALMACEN_VENTA" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">TIPO_MOVIMIENTO</label>
+                <input asp-for="TIPO_MOVIMIENTO" type="text" class="form-control">
+                <span asp-validation-for="TIPO_MOVIMIENTO" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">TIPO_DOCUMENTO</label>
+                <input asp-for="TIPO_DOCUMENTO" type="text" class="form-control">
+                <span asp-validation-for="TIPO_DOCUMENTO" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">NRO_DOCUMENTO</label>
+                <input asp-for="NRO_DOCUMENTO" type="text" class="form-control">
+                <span asp-validation-for="NRO_DOCUMENTO" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">COD_ITEM_2</label>
+                <input asp-for="COD_ITEM_2" type="text" class="form-control">
+                <span asp-validation-for="COD_ITEM_2" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">PROVEEDOR</label>
+                <input asp-for="PROVEEDOR" type="text" class="form-control">
+                <span asp-validation-for="PROVEEDOR" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">ALMACEN_DESTINO</label>
+                <input asp-for="ALMACEN_DESTINO" type="text" class="form-control">
+                <span asp-validation-for="ALMACEN_DESTINO" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">CANTIDAD</label>
+                <input asp-for="CANTIDAD" type="text" class="form-control">
+                <span asp-validation-for="CANTIDAD" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">DOC_REF_1</label>
+                <input asp-for="DOC_REF_1" type="text" class="form-control">
+                <span asp-validation-for="DOC_REF_1" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">DOC_REF_2</label>
+                <input asp-for="DOC_REF_2" type="text" class="form-control">
+                <span asp-validation-for="DOC_REF_2" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">DOC_REF_3</label>
+                <input asp-for="DOC_REF_3" type="text" class="form-control">
+                <span asp-validation-for="DOC_REF_3" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">DOC_REF_4</label>
+                <input asp-for="DOC_REF_4" type="text" class="form-control">
+                <span asp-validation-for="DOC_REF_4" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">DOC_REF_5</label>
+                <input asp-for="DOC_REF_5" type="text" class="form-control">
+                <span asp-validation-for="DOC_REF_5" class="text-danger"></span>
+            </div>
+
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <a asp-action="Listar" asp-controller="Mantenedor" class="btn btn-warning">Volver a la lista</a>
+    </form>
+
+
+  </div>
+</div>
+

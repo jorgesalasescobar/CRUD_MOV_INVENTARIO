@@ -1,0 +1,138 @@
+﻿@using CRUD_MOV_INVENTARIO.Models
+
+@model List<MOV_INVENTARIOModel>
+@{
+    ViewData["Title"] = "Listar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Lista Contacto
+    </div>
+    <div class="card-body">
+        <a asp-action="Guardar" asp-controller="Mantenedor" class="btn btn-success"><i class="bi bi-plus-circle"></i> Crear Nuevo</a>
+        <hr />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>COD_CIA</th>
+                    <th>COMPANIA_VENTA_3</th>
+                    <th>ALMACEN_VENTA</th>
+                    <th>TIPO_MOVIMIENTO</th>
+                    <th>TIPO_DOCUMENTO</th>
+                    <th>NRO_DOCUMENTO</th>
+                    <th>COD_ITEM_2</th>
+                    <th>PROVEEDOR</th>
+                    <th>ALMACEN_DESTINO</th>
+                    <th>CANTIDAD</th>
+                    <th>DOC_REF_1</th>
+                    <th>DOC_REF_2</th>
+                    <th>DOC_REF_3</th>
+                    <th>DOC_REF_4</th>
+                    <th>DOC_REF_5</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.COD_CIA</td>
+                        <td>@item.COMPANIA_VENTA_3</td>
+                        <td>@item.ALMACEN_VENTA</td>
+                        <td>@item.TIPO_MOVIMIENTO</td>
+                        <td>@item.TIPO_DOCUMENTO</td>
+                        <td>@item.NRO_DOCUMENTO</td>
+                        <td>@item.COD_ITEM_2</td>
+                        <td>@item.PROVEEDOR</td>
+                        <td>@item.ALMACEN_DESTINO</td>
+                        <td>@item.CANTIDAD</td>
+                        <td>@item.DOC_REF_1</td>
+                        <td>@item.DOC_REF_2</td>
+                        <td>@item.DOC_REF_3</td>
+                        <td>@item.DOC_REF_4</td>
+                        <td>@item.DOC_REF_5</td>
+                        <td>
+                            <a asp-action="Editar" asp-controller="Mantenedor" class="btn btn-primary btn-sm" 
+                                asp-route-COD_CIA="@item.COD_CIA" 
+                                asp-route-COMPANIA_VENTA_3="@item.COMPANIA_VENTA_3"
+                                asp-route-ALMACEN_VENTA="@item.ALMACEN_VENTA"
+                                asp-route-TIPO_MOVIMIENTO="@item.TIPO_MOVIMIENTO"
+                                asp-route-TIPO_DOCUMENTO="@item.TIPO_DOCUMENTO"
+                                asp-route-NRO_DOCUMENTO="@item.NRO_DOCUMENTO"
+                                asp-route-COD_ITEM_2="@item.COD_ITEM_2"
+                                asp-route-PROVEEDOR="@item.PROVEEDOR"
+                                asp-route-ALMACEN_DESTINO="@item.ALMACEN_DESTINO"
+                                asp-route-CANTIDAD="@item.CANTIDAD"
+                                asp-route-DOC_REF_1="@item.DOC_REF_1"
+                                asp-route-DOC_REF_2="@item.DOC_REF_2"
+                                asp-route-DOC_REF_3="@item.DOC_REF_3"
+                                asp-route-DOC_REF_4="@item.DOC_REF_4"
+                                asp-route-DOC_REF_5="@item.DOC_REF_5" >Editar</a>
+                            <a asp-action="Eliminar" asp-controller="Mantenedor" class="btn btn-danger btn-sm" 
+                               asp-route-COD_CIA="@item.COD_CIA"
+                               asp-route-COMPANIA_VENTA_3="@item.COMPANIA_VENTA_3"
+                               asp-route-ALMACEN_VENTA="@item.ALMACEN_VENTA"
+                               asp-route-TIPO_MOVIMIENTO="@item.TIPO_MOVIMIENTO"
+                               asp-route-TIPO_DOCUMENTO="@item.TIPO_DOCUMENTO"
+                               asp-route-NRO_DOCUMENTO="@item.NRO_DOCUMENTO"
+                               asp-route-COD_ITEM_2="@item.COD_ITEM_2" >Eliminar</a>
+
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+
+@* @model List<ContactoModel>
+@{
+    ViewData["Title"] = "Listar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="card">
+  <div class="card-header">
+    Lista Contacto
+  </div>
+  <div class="card-body">
+    <a asp-action="Guardar" asp-controller="Mantenedor" class="btn btn-success"><i class="bi bi-plus-circle"></i> Crear Nuevo</a>
+    <hr />
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Telefono</th>
+                <th>Correo</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Nombre</td>
+                        <td>@item.Telefono</td>
+                        <td>@item.Correo</td>
+                        <td>
+                             <a asp-action="Editar" asp-controller="Mantenedor" class="btn btn-primary btn-sm" asp-route-IdContacto="@item.IdContacto" >Editar</a>
+                             <a asp-action="Eliminar" asp-controller="Mantenedor" class="btn btn-danger btn-sm" asp-route-IdContacto="@item.IdContacto" >Eliminar</a>
+                        </td>
+                    </tr>
+
+                }
+        </tbody>
+    </table>
+
+  </div>
+</div>
+
+ *@
